@@ -175,12 +175,18 @@ const ruleProviders = {
 // 规则
 const rules = [
   "AND,((NETWORK,UDP),(DST-PORT,443)),REJECT", // 拦截quic流量
-
+  
   "DOMAIN-SUFFIX,wyxhuawei.com,DIRECT",
   // "IP-CIDR,10.160.63.0/24,DIRECT", // 校园网认证
   // "PROCESS-NAME,ShanbayWords,DIRECT", // 强制扇贝单词进程全局直
   // 自定义规则
-  "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google服务
+
+  // —— AI Studio 专项,必须在通用 Google 规则之前 ——
+  "DOMAIN-SUFFIX,aistudio.google.com,谷歌服务",
+  "DOMAIN-SUFFIX,generativelanguage.googleapis.com,谷歌服务",
+  "DOMAIN-SUFFIX,clients6.google.com,谷歌服务",
+
+  "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google其他服务
   "DOMAIN-SUFFIX,gstatic.com,节点选择", // Google静态资源
   "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择", // Google Play下载服务
   "DOMAIN-SUFFIX,github.io,节点选择", // Github Pages
