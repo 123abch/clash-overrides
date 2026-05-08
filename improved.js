@@ -26,7 +26,7 @@ const dnsConfig = {
     // 本地主机/设备
     "+.lan",
     "+.local",
-    // Windows网络出现小地球图标
+    // // Windows网络出现小地球图标
     "+.msftconnecttest.com",
     "+.msftncsi.com",
     // QQ快速登录检测失败
@@ -57,135 +57,128 @@ const ruleProviderCommon = {
 };
 // 规则集配置
 const ruleProviders = {
-  "reject": {
-    ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
-    "path": "./ruleset/loyalsoldier/reject.yaml"
-  },
   "icloud": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt",
-    "path": "./ruleset/loyalsoldier/icloud.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/icloud.yaml",
+    "path": "./ruleset/self-maintained/icloud.yaml"
   },
   "apple": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt",
-    "path": "./ruleset/loyalsoldier/apple.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/apple.yaml",
+    "path": "./ruleset/self-maintained/apple.yaml"
   },
   "google": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
-    "path": "./ruleset/loyalsoldier/google.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/google.yaml",
+    "path": "./ruleset/self-maintained/google.yaml"
   },
   "proxy": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
-    "path": "./ruleset/loyalsoldier/proxy.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/proxy.yaml",
+    "path": "./ruleset/self-maintained/proxy.yaml"
   },
   "direct": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
-    "path": "./ruleset/loyalsoldier/direct.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/direct.yaml",
+    "path": "./ruleset/self-maintained/direct.yaml"
   },
   "private": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt",
-    "path": "./ruleset/loyalsoldier/private.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/private.yaml",
+    "path": "./ruleset/self-maintained/private.yaml"
   },
   "gfw": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
-    "path": "./ruleset/loyalsoldier/gfw.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/gfw.yaml",
+    "path": "./ruleset/self-maintained/gfw.yaml"
   },
   "tld-not-cn": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt",
-    "path": "./ruleset/loyalsoldier/tld-not-cn.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/tld-not-cn.yaml",
+    "path": "./ruleset/self-maintained/tld-not-cn.yaml"
   },
   "telegramcidr": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
-    "path": "./ruleset/loyalsoldier/telegramcidr.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/telegramcidr.yaml",
+    "path": "./ruleset/self-maintained/telegramcidr.yaml"
   },
   "cncidr": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt",
-    "path": "./ruleset/loyalsoldier/cncidr.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/cncidr.yaml",
+    "path": "./ruleset/self-maintained/cncidr.yaml"
   },
   "lancidr": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt",
-    "path": "./ruleset/loyalsoldier/lancidr.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/lancidr.yaml",
+    "path": "./ruleset/self-maintained/lancidr.yaml"
   },
   "applications": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt",
-    "path": "./ruleset/loyalsoldier/applications.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/applications.yaml",
+    "path": "./ruleset/self-maintained/applications.yaml"
   },
   "bahamut": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Bahamut.txt",
-    "path": "./ruleset/xiaolin-007/bahamut.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/bahamut.yaml",
+    "path": "./ruleset/self-maintained/bahamut.yaml"
   },
   "YouTube": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/YouTube.txt",
-    "path": "./ruleset/xiaolin-007/YouTube.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/youtube.yaml",
+    "path": "./ruleset/self-maintained/youtube.yaml"
   },
   "Netflix": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Netflix.txt",
-    "path": "./ruleset/xiaolin-007/Netflix.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/netflix.yaml",
+    "path": "./ruleset/self-maintained/netflix.yaml"
   },
   "Spotify": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Spotify.txt",
-    "path": "./ruleset/xiaolin-007/Spotify.yaml"
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/spotify.yaml",
+    "path": "./ruleset/self-maintained/spotify.yaml"
   },
   "BilibiliHMT": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/BilibiliHMT.txt",
-    "path": "./ruleset/xiaolin-007/BilibiliHMT.yaml"    
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/bilibili-hmt.yaml",
+    "path": "./ruleset/self-maintained/bilibili-hmt.yaml"    
   },
   "AI": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/AI.txt",
-    "path": "./ruleset/xiaolin-007/AI.yaml"    
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/ai.yaml",
+    "path": "./ruleset/self-maintained/ai.yaml"    
   },
   "TikTok": {
     ...ruleProviderCommon,
     "behavior": "classical",
-    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/TikTok.txt",
-    "path": "./ruleset/xiaolin-007/TikTok.yaml"    
+    "url": "https://fastly.jsdelivr.net/gh/123abch/clash-rules@main/rules/tiktok.yaml",
+    "path": "./ruleset/self-maintained/tiktok.yaml"    
   },
 };
 // 规则
 const rules = [
-  "AND,((NETWORK,udp),(DST-PORT,443)),REJECT", // 禁用Quic流量
-  "DOMAIN-SUFFIX,alibabacloud.com,DIRECT",
+  "AND,((NETWORK,UDP),(DST-PORT,443)),REJECT", // 拦截quic流量
+
   "DOMAIN-SUFFIX,wyxhuawei.com,DIRECT",
   // "IP-CIDR,10.160.63.0/24,DIRECT", // 校园网认证
-  "DOMAIN-SUFFIX,shanbay.com,DIRECT", // 扇贝单词
-  "DOMAIN-SUFFIX,baydn.com,DIRECT",   // 扇贝 CDN
+  // "PROCESS-NAME,ShanbayWords,DIRECT", // 强制扇贝单词进程全局直
   // 自定义规则
   "DOMAIN-SUFFIX,googleapis.cn,节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,节点选择", // Google静态资源
@@ -195,7 +188,6 @@ const rules = [
   // Loyalsoldier 规则集
   "RULE-SET,applications,全局直连",
   "RULE-SET,private,全局直连",
-  "RULE-SET,reject,广告过滤",
   "RULE-SET,icloud,苹果服务",
   "RULE-SET,apple,苹果服务",
   "RULE-SET,YouTube,YouTube",
@@ -247,38 +239,25 @@ function main(config) {
       ...groupBaseOption,
       "name": "节点选择",
       "type": "select",
-      "proxies": ["专线优先", "延迟选优", "故障转移"],
+      "proxies": ["延迟选优", "故障转移"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
     {
       ...groupBaseOption,
-      "name": "专线优先",
-      "type": "fallback",
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": 600,
-      "include-all": true,
-      "filter": "(?i)专线|networklinkpro|sksapisrv",
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg"
-    },
-    {
-      ...groupBaseOption,
       "name": "延迟选优",
       "type": "url-test",
-      "url": "https://www.gstatic.com/generate_204",
       "interval": 300,
       "tolerance": 150,
       "include-all": true,
-      "filter": "^(?!.*(专线|networklinkpro|sksapisrv|官网|套餐|流量|异常|剩余)).*$",
+      "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"
     },
     {
       ...groupBaseOption,
       "name": "故障转移",
       "type": "fallback",
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": 600,
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
@@ -320,8 +299,7 @@ function main(config) {
       "name": "AI",
       "type": "select",
       "include-all": true,
-      "filter": "(?i)专线|AI|networklinkpro|sksapisrv",
-      "proxies": ["专线优先", "节点选择", "DIRECT"],
+      "proxies": ["节点选择", "延迟选优", "故障转移"],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
     },
     {
@@ -376,13 +354,6 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "广告过滤",
-      "type": "select",
-      "proxies": ["REJECT", "DIRECT"],
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg"
-    },
-    {
-      ...groupBaseOption,
       "name": "全局直连",
       "type": "select",
       "proxies": ["DIRECT", "节点选择", "延迟选优", "故障转移"],
@@ -410,32 +381,12 @@ function main(config) {
   // 覆盖原配置中的规则
   config["rule-providers"] = ruleProviders;
   config["rules"] = rules;
-  // 只对真正支持 UDP 的协议设置 udp = true
-  // HTTP / SOCKS 等纯 TCP 协议即使设了 udp:true 也无法转发 UDP，
-  // 反而会让 Mihomo 误以为它能处理 UDP 流量，导致 UDP 包被错误分配后丢失
-  const udpCapableProtocols = [
-    "anytls",
-    "tuic",
-    "hysteria",
-    "hysteria2",
-    "vless",
-    "vmess",
-    "trojan",
-    "shadowsocks",
-    "ss",
-    "shadowsocksr",
-    "ssr",
-    "wireguard"
-  ];
-
-  if (config["proxies"]) {
+// 添加判断
+  if(config["proxies"]) {
     config["proxies"].forEach(proxy => {
-      if (udpCapableProtocols.includes(proxy.type)) {
-        proxy.udp = true;
-      } else {
-        // HTTP/SOCKS 等不支持 UDP 的协议，显式关闭
-        proxy.udp = false;
-      }
+      // 为每个节点设置 udp = true
+      proxy.udp = true
+
     })
   }
   // 返回修改后的配置
